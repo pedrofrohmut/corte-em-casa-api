@@ -6,7 +6,6 @@
   "author": "pedrofrohmut <pedrofrohmut@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
     "start": "node index.js"
   },
   "engines": {

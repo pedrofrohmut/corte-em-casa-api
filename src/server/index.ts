@@ -1,17 +1,11 @@
-import express from "express"
-import dotenv from "dotenv"
-import path from "path"
+import App from "../app"
 
-dotenv.config({
-  path: path.resolve(__dirname, "../../.env")
-})
+if (!process.env.PORT) {
+  console.error("Not a valid Server PORT number in the ENV")
+  process.exit(1)
+}
 
-const App = express()
-
-const PORT = process.env.PORT || 5000
-
-App.get("/", (_, res) => {
-  res.send("Welcome to Corte em Casa API")
-})
-
-App.listen(PORT, () => console.log(`Corte em Casa API started on Port: ${PORT}`))
+App.listen(
+  process.env.PORT,
+  console.log(`[PORT] Corte em Casa API started on Port: ${process.env.PORT}`)
+)

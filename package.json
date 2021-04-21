@@ -8,7 +8,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node .dist/server/index.js",
-    "dev": "nodemon --exec ts-node-dev --respawn --transpile-only src/server/index.ts"
+    "dev": "set NODE_ENV=development&& nodemon --exec ts-node-dev --respawn --transpile-only src/server/index.ts"
   },
   "engines": {
     "node": "14.16.0"

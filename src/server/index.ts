@@ -5,7 +5,6 @@ if (!process.env.PORT) {
   process.exit(1)
 }
 
-App.listen(
-  process.env.PORT,
+App.listen(process.env.PORT, () =>
   console.log(`[PORT] Corte em Casa API started on Port: ${process.env.PORT}`)
 )

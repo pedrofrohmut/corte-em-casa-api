@@ -1,4 +1,9 @@
 import App from "../app"
+import { testConnection } from "./utils"
+
+;(async () => {
+  await testConnection()
+})()
 
 if (!process.env.PORT) {
   console.error("Not a valid Server PORT number in the ENV")

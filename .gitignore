@@ -6,3 +6,6 @@ yarn.lock
 
 *.swp
 *.swo
+
+# Database
+src/database/config.ts

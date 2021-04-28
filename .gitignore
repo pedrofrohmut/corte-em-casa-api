@@ -9,3 +9,4 @@ yarn.lock
 
 # Database
 src/database/config.ts
+src/database/config.js

@@ -1,0 +1,6 @@
+PORT = the server port number (Ex: 1234)
+
+DB_USER = the development database username (ex: root)
+DB_PASS = the db password (ex: 123)
+DB_NAME = the database name (ex: my_db)
+DB_HOST = the database host address (ex: localhost)

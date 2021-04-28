@@ -3,10 +3,8 @@ node_modules
 yarn.lock
 
 .env
+.env.development
+.env.testing
 
 *.swp
 *.swo
-
-# Database
-src/database/config.ts
-src/database/config.js

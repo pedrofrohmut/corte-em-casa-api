@@ -5,6 +5,7 @@ module.exports = {
     database: "corte-em-casa-development",
     host: "127.0.0.1",
     dialect: "postgres",
+    logging: false,
     define: {
       timestamps: true,
       underscored: true,

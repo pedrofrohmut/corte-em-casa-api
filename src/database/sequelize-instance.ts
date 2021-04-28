@@ -6,7 +6,7 @@ const config = databaseConfig.development
 const { database, username, password } = config
 
 class SequelizeSingleton {
-  private static instance: any = null
+  private static instance: Sequelize | null = null
   private static counter: number = 0
 
   private constructor() {}

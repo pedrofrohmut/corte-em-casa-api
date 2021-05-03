@@ -18,7 +18,7 @@ class SequelizeSingleton {
       SequelizeSingleton.counter = SequelizeSingleton.counter + 1
     }
     if (SequelizeSingleton.counter > 1) {
-      throw new Error("[SEQUELIZE_INSTANCE] too many instances for a singleton")
+      throw new Error("ERROR => [SEQUELIZE_INSTANCE] too many instances for a singleton")
     }
     return SequelizeSingleton.instance
   }

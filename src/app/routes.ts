@@ -1,16 +1,22 @@
 import express, { Application, Request, Response } from "express"
 
-import listBarbers from "../controllers/barbers/list"
+import SignInController from "../controllers/users/signin"
+import SignInInfoController from "../controllers/users/signin/info"
+import SignUpController from "../controllers/users/signup"
+import SignUpInfoController from "../controllers/users/signup/info"
+import ValidateTokenController from "../controllers/users/validate-token"
+import ValidateTokenInfoController from "../controllers/users/validate-token/info"
 
 const router = express.Router()
 
-router.get("/barbers", listBarbers)
+router.post("/users/signin", SignInController)
+router.get("/users/signin/info", SignInInfoController)
+router.post("/users/signup", SignUpController)
+router.get("/users/signup/info", SignUpInfoController)
+router.get("/users/validate-token", ValidateTokenController)
+router.get("/users/validate-token/info", ValidateTokenInfoController)
 
 // GLOBALS
-router.get("/node-env", (_: Request, res: Response) =>
-  res.send(process.env.NODE_ENV || "NODE_ENV not defined")
-)
-
 router.use((req: Request, res: Response) => {
   res
     .status(404)

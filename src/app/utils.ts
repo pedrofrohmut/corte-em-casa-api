@@ -1,23 +1,11 @@
 import path from "path"
 
-export const validateNodeEnv = (nodeEnv: string | undefined) => {
+export const validateNodeEnv = (nodeEnv: string | undefined): boolean => {
   if (nodeEnv === undefined || nodeEnv === "") return false
   return nodeEnv === "development" || nodeEnv == "production" || nodeEnv == "testing"
 }
 
-export const getEnvPath = (nodeEnv: string | undefined) => {
-  let envPath = undefined
-  switch (nodeEnv) {
-    case "development":
-      envPath = path.resolve(__dirname + "/../../.env.development")
-      break
-    case "testing":
-      envPath = path.resolve(__dirname + "/../../.env.testing")
-      break
-    case "production":
-      envPath = path.resolve(__dirname + "/../../.env")
-      break
-  }
-  console.log(`[ENV_PATH] The env path is: ${envPath}`)
-  return envPath
+export const validateJwtSecret = (jwtSecret: string | undefined): boolean => {
+  if (jwtSecret === undefined || jwtSecret === "") return false
+  return jwtSecret.length === 16
 }
